@@ -2,9 +2,10 @@
 import rospy
 from sensor_msgs.msg import Imu
 
-def recv_imu(data):
-     data.linear_acceleration
-
+def recv_imu(message):
+    accel = message.linear_acceleration
+    omega = message.angular_velocity
+    print accel.x, accel.y, accel.z, omega.x, omega.y, omega.z
 
 if __name__ == '__main__':
     rospy.init_node('imu_subscriber')

@@ -17,7 +17,18 @@ $ roslaunch lab_usb_9axisimu_driver lab_usb_9axisimu_driver.launch
 ノード、トピックの確認
 ```
 $ rosnode list
+/lab_usb_9axisimu_driver
+
 $ rostopic list
+/imu/data_raw
+/imu/mag
+/imu/temperature
+```
+
+試しに表示
+
+```
+$ rostopic echo /imu/data_raw
 ```
 
 rosrunで起動してlogに保存
